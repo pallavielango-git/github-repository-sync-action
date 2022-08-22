@@ -1,0 +1,11 @@
+#!/bin/bash
+
+MAP=$(cat <<-END
+/commons/= contextarea-commons
+/ark/= contextarea-ark
+/idz=contextarea-idz
+END
+)
+
+contextarealabel=$(echo "$MAP" | grep "$label" | cut -d'=' -f1 | cut -d"-" -f2)
+
